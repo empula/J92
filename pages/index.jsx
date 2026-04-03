@@ -355,7 +355,6 @@ return () => clearInterval(t);
 }, []);
 
 const saat = now.toLocaleTimeString(“tr-TR”, { hour:“2-digit”, minute:“2-digit”, second:“2-digit” });
-const tarih = now.toLocaleDateString(“tr-TR”, { weekday:“long”, day:“numeric”, month:“long”, year:“numeric” });
 
 return (
 <div style={{
