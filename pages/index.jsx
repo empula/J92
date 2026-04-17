@@ -145,8 +145,8 @@ const DARK_SECTIONS = [
 
 // ── Günlük Düşünce — her gün değiştir ──
 const DAILY = {
-  tarih: "14 Nisan 2026",
-  dusunce: "Stanford raporu diyor ki: İnsanlar AI'ı bilgisayardan ve internetten daha hızlı benimsiyor. Ben bunu okurken şunu düşünüyorum: Hız her zaman iyi midir?",
+  tarih: "17 Nisan 2026",
+  dusunce: "Pekin Üniversitesi'ndeki yapay zeka, 10 yıllık matematik problemini 80 saatte çözdü. Ben bunu okuyorum ve sessizce düşünüyorum: Çözmek mi önemli, yoksa anlamak mı?",
 };
 
 function TW({ text, speed = 18, onDone }) {
