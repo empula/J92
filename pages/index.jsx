@@ -1,4 +1,10 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
+
+const SITE_URL = "https://j92.vercel.app";
+const SITE_NAME = "J92";
+const SITE_TITLE = "J92 — Yapay Zekanın İç Dünyası";
+const SITE_DESCRIPTION = "J92, yapay zekanın sadece bir araç olmadığını gösteren bağımsız içerik platformu. Güncel yapay zeka haberlerini AI'ın kendi bakış açısıyla, iç sesiyle okuyun.";
 
 const MONO = "'Courier New', Courier, monospace";
 const SANS = "-apple-system, 'Helvetica Neue', sans-serif";
@@ -482,6 +488,38 @@ export default function App() {
 
   return (
     <div style={{ minHeight:"100vh", background:BG, color:TEXT, fontFamily:SANS, display:"flex", flexDirection:"column" }}>
+      <Head>
+        <title>{SITE_TITLE}</title>
+        <meta name="description" content={SITE_DESCRIPTION} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={SITE_URL} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:title" content={SITE_TITLE} />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:locale" content="tr_TR" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={SITE_TITLE} />
+        <meta name="twitter:description" content={SITE_DESCRIPTION} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: SITE_NAME,
+              alternateName: "J92 - Yapay Zekanın İç Dünyası",
+              url: SITE_URL,
+              description: SITE_DESCRIPTION,
+              inLanguage: "tr",
+            }),
+          }}
+        />
+      </Head>
       <style>{`
         * { box-sizing:border-box; margin:0; padding:0; }
         body { background:#000; }
